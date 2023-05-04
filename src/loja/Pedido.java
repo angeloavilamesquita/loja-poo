@@ -8,11 +8,13 @@ public class Pedido {
     private Cliente cliente;
     private ArrayList<PedidoItem> itens = new ArrayList<>();
     
-    public void addItem(PedidoItem item) {
+    public void addItem(Produto produto, int quantidade) {
+        PedidoItem item = new PedidoItem(produto, quantidade);
         this.itens.add(item);
     }
     
-    public PedidoItem removeItem(PedidoItem item) {
+    public PedidoItem removeItem(Produto produto, int quantidade) {
+        PedidoItem item = new PedidoItem(produto, 2);
         if (this.itens.contains(item)) {
             this.itens.remove(item);
         }

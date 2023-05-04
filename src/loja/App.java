@@ -35,13 +35,13 @@ public class App {
         System.out.println("Telefone: (" + cliente.getTelefone().getDdd() 
             + ") " + cliente.getTelefone().getNumero());*/
         
-        PedidoItem pedidoItem = new PedidoItem();
+        /*PedidoItem pedidoItem = new PedidoItem();
         pedidoItem.setProduto(produto);
         pedidoItem.setQuantidade(2);
         
         PedidoItem pedidoItem2 = new PedidoItem();
         pedidoItem2.setProduto(produto2);
-        pedidoItem2.setQuantidade(5);
+        pedidoItem2.setQuantidade(5);*/
         
         
         /*System.out.println("***** PEDIDO ITEM *****");
@@ -54,8 +54,10 @@ public class App {
         pedido.setDataDeCriacao("27/04/2023");
         pedido.setStatus("em andamento");
         pedido.setCliente(cliente);
-        pedido.addItem(pedidoItem);
-        pedido.addItem(pedidoItem2);
+        pedido.addItem(produto, 2);
+        pedido.addItem(produto2, 5);
+        
+        pedido.removeItem(produto, 2);
         
         /*System.out.println("**********PEDIDO**********");
         System.out.println("Data: " + pedido.getDataDeCriacao());
